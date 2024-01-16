@@ -9,6 +9,8 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        implementation("org.springframework:spring-core:4.2.3.RELEASE")
+
         
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -24,20 +26,4 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
-
-// App module build.gradle file
-
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-
-android {
-    // Your Android-specific configurations go here
-}
-
-dependencies {
-    // Your other dependencies go here
-
-    // Spring Framework dependency
-    implementation("org.springframework:spring-core:4.2.3.RELEASE")
 }
